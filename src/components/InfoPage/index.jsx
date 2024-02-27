@@ -39,7 +39,7 @@ const InfoPage = ({ data, changeFn }) => {
                 <img src={initialData[name].img} alt="Loading" />
             </div>
             <div className={styles.song}>
-                <ReactPlayer url={zimmer} controls={false} playing />
+                <ReactPlayer url={zimmer} controls={false} playing style={{ width: 0, height: 0 }} />
             </div>
         </div>
     );
