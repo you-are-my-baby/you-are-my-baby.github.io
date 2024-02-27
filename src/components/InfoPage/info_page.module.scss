@@ -1,0 +1,122 @@
+.info_page_wrapper {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .absolute_texts {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        & > p {
+            position: absolute;
+            color: white;
+            font-size: 90px;
+            font-family: var(--font-handwrite);
+            transform: scale(0);
+            opacity: 0;
+            text-align: center;
+        }
+        .name {
+            animation: changeTextSize 5s forwards;
+            animation-delay: 1.5s;
+        }
+        .tell_you {
+            animation: changeTextSize 5s forwards;
+            animation-delay: 5s;
+        }
+        .you_are {
+            animation: changeTextSize 5s forwards;
+            animation-delay: 8s;
+        }
+        .my {
+            animation: changeTextSize 5s forwards;
+            animation-delay: 12s;
+        }
+    }
+    .earth {
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        opacity: 0;
+        transform: scale(0);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        animation: forEarth 10s forwards;
+        animation-delay: 17s;
+    }
+    .wish {
+        color: white;
+        position: absolute;
+        transform: scale(0);
+        opacity: 0;
+        top: 15%;
+        font-size: 30px;
+        text-align: center;
+        font-family: var(--font-handwrite);
+        padding: 0 20px;
+        animation: forEarth 7s forwards;
+        animation-delay: 25s;
+    }
+    .gift {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        bottom: 5%;
+        opacity: 0;
+        transform: scale(0);
+        animation: forEarth 7s forwards;
+        animation-delay: 30s;
+        & > p {
+            font-size: 30px;
+            text-align: center;
+            font-family: var(--font-handwrite);
+            padding: 0 20px;
+            animation: forEarth 7s forwards;
+            animation-delay: 25s;
+            color: white;
+        }
+        & > img {
+            width: 150px;
+            height: 150px;
+        }
+    }
+    .song {
+        position: absolute;
+        z-index: -999;
+    }
+}
+
+@keyframes changeTextSize {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+@keyframes forEarth {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
